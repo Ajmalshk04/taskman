@@ -1,0 +1,34 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist-ssr
+*.local
+
+# Source files - don't commit
+src/
+public/
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Config files
+vite.config.ts
+tsconfig*.json
+eslint.config.js
+package*.json
+index.html
+
+# Only dist folder should be committed
+!dist/
