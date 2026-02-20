@@ -30,5 +30,5 @@ eslint.config.js
 package*.json
 index.html
 
-# Only dist folder should be committed
+# Allow dist folder for GitHub Pages
 !dist/
