@@ -29,6 +29,3 @@ tsconfig*.json
 eslint.config.js
 package*.json
 index.html
-
-# Allow dist folder for GitHub Pages
-!dist/
