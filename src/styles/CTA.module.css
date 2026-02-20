@@ -1,0 +1,112 @@
+.section {
+    padding: 8rem 0;
+    background-color: white;
+    position: relative;
+}
+
+.shapeContainer {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.shapeImg {
+    width: auto;
+    height: auto;
+    transform: scaleX(-1);
+}
+
+.contentContainer {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+}
+
+.description {
+    color: #9ca3af;
+    margin-bottom: 2.5rem;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.625;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 32rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+    .inputContainer {
+        flex-direction: row;
+    }
+}
+
+.emailInput {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 9999px;
+    border: 1px solid #e5e7eb;
+    outline: none;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    font-size: 0.875rem;
+    transition: border-color 0.3s ease;
+}
+
+@media (min-width: 640px) {
+    .emailInput {
+        width: auto;
+        flex: 1;
+    }
+}
+
+.emailInput:focus {
+    border-color: var(--color-primary);
+}
+
+.submitButton {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 10px 15px -3px rgba(26, 80, 255, 0.3);
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+    .submitButton {
+        width: auto;
+    }
+}
+
+.submitButton:hover {
+    background-color: #1e40af;
+}

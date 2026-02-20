@@ -12,9 +12,7 @@ dist
 dist-ssr
 *.local
 
-# Source files - don't commit
-src/
-public/
+# IDE
 .vscode/
 .idea/
 *.suo
@@ -23,10 +21,3 @@ public/
 *.sln
 *.sw?
 .DS_Store
-
-# Config files
-vite.config.ts
-tsconfig*.json
-eslint.config.js
-package*.json
-index.html

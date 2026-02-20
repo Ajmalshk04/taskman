@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+:root {
+    --font-sans: "Rubik", "Poppins", sans-serif;
+    --color-primary: #1a50ff;
+    --color-secondary: #ffc800;
+    --color-navy: #2b3040;
+    --color-dark: #1e1e2f;
+}
+
+
+/* ===== HERO SECTION ANIMATIONS ===== */
+
+/* Background circles - fan out or grow into position from right */
+@keyframes heroShapeGrowFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(300px) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* Illustration cards - scale/burst into position */
+@keyframes heroCardBurst {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Illustration cards - slide up into position */
+@keyframes heroCardSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Infinitely floating animation for cards */
+@keyframes heroCardFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* ===== BENEFITS SECTION ANIMATIONS ===== */
+
+/* Staggered fade reveal */
+@keyframes benefitsFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== WHY SECTION ANIMATIONS ===== */
+
+/* Background line - draw in effect */
+@keyframes whyLineDraw {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+/* Background line - draw in from left to right */
+@keyframes whyLineDrawFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-800px) rotate(70deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) rotate(70deg);
+    }
+}
+
+/* Circle - grow into position */
+@keyframes whyCircleGrow {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Circle - grow into position from left */
+@keyframes whyCircleGrowFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-300px) scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* Illustration cards - scale/burst into position */
+@keyframes whyCardBurst {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Infinitely floating animation for cards */
+@keyframes whyCardFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Staggered fade reveal for text */
+@keyframes whyTextFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== CTA SECTION ANIMATIONS ===== */
+
+/* Basic fade reveal */
+@keyframes ctaFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Triangle - fan in / slide from right */
+@keyframes ctaTriangleFanIn {
+    from {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== ANIMATION CLASSES ===== */
+
+/* Hero animations */
+.animate-hero-shape {
+    animation: heroShapeGrowFromRight 0.8s ease-out forwards;
+}
+
+.animate-hero-card-burst {
+    animation: heroCardBurst 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-hero-card-float {
+    animation: heroCardFloat 4s ease-in-out infinite;
+}
+
+/* Benefits animations */
+.animate-benefits-fade {
+    animation: benefitsFadeIn 0.7s ease-out forwards;
+    opacity: 0;
+}
+
+/* Why animations */
+.animate-why-line-draw {
+    animation: whyLineDraw 1s ease-out forwards;
+}
+
+.animate-why-circle-grow {
+    animation: whyCircleGrow 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-why-card-burst {
+    animation: whyCardBurst 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-why-card-float {
+    animation: whyCardFloat 4s ease-in-out infinite;
+}
+
+.animate-why-text-fade {
+    animation: whyTextFadeIn 0.7s ease-out forwards;
+    opacity: 0;
+}
+
+/* CTA animations */
+.animate-cta-fade {
+    animation: ctaFadeIn 0.7s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-cta-triangle {
+    animation: ctaTriangleFanIn 0.8s ease-out forwards;
+}
+
+/* Animation delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+.delay-900 { animation-delay: 900ms; }
+.delay-1000 { animation-delay: 1000ms; }
+.delay-1200 { animation-delay: 1200ms; }
+.delay-1400 { animation-delay: 1400ms; }
+.delay-1600 { animation-delay: 1600ms; }
+
+html,
+body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    background-color: white;
+}
+
+
+/* ===== SCROLL TRIGGER CLASS ===== */
+
+/* Hero shapes - only animate when in view */
+.animate-on-scroll .hero-shape-blue {
+    animation: heroShapeGrowFromRight 0.8s ease-out forwards;
+}
+
+.animate-on-scroll .hero-shape-yellow {
+    animation: heroShapeGrowFromRight 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.animate-on-scroll .hero-shape-dark {
+    animation: heroShapeGrowFromRight 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+/* Hero cards - only animate when in view */
+.animate-on-scroll .hero-card-1 {
+    animation: heroCardSlideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 1.2s;
+}
+
+.animate-on-scroll .hero-card-2 {
+    animation: heroCardSlideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 1.3s;
+}
+
+.animate-on-scroll .hero-card-3 {
+    animation: heroCardSlideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 1.4s;
+}
+
+.animate-on-scroll .hero-card-4 {
+    animation: heroCardSlideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 1.5s;
+}
+
+.animate-on-scroll .hero-card-img {
+    animation: heroCardFloat 4s ease-in-out infinite;
+}
+
+.animate-on-scroll .hero-card-1 .hero-card-img {
+    animation-delay: 1.8s;
+}
+
+.animate-on-scroll .hero-card-2 .hero-card-img {
+    animation-delay: 1.9s;
+}
+
+.animate-on-scroll .hero-card-3 .hero-card-img {
+    animation-delay: 2s;
+}
+
+.animate-on-scroll .hero-card-4 .hero-card-img {
+    animation-delay: 2.1s;
+}
+
+/* Benefits cards - only animate when in view */
+.animate-on-scroll .benefit-card {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.7s ease-out;
+}
+
+.animate-on-scroll .benefit-card:nth-child(1) {
+    animation: benefitsFadeIn 0.7s ease-out forwards;
+}
+
+.animate-on-scroll .benefit-card:nth-child(2) {
+    animation: benefitsFadeIn 0.7s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.animate-on-scroll .benefit-card:nth-child(3) {
+    animation: benefitsFadeIn 0.7s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+/* Why section shapes - only animate when in view */
+.animate-on-scroll .why-shape-rect {
+    animation: whyLineDrawFromLeft 1s ease-out forwards;
+}
+
+.animate-on-scroll .why-shape-circle {
+    animation: whyCircleGrowFromLeft 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Why cards - only animate when in view */
+.animate-on-scroll .why-card {
+    animation: whyCardBurst 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-on-scroll .why-card-1 {
+    animation-delay: 0.8s;
+}
+
+.animate-on-scroll .why-card-2 {
+    animation-delay: 0.8s;
+}
+
+.animate-on-scroll .why-card-img {
+    animation: whyCardFloat 4s ease-in-out infinite;
+}
+
+.animate-on-scroll .why-card-1 .why-card-img {
+    animation-delay: 1.2s;
+}
+
+.animate-on-scroll .why-card-2 .why-card-img {
+    animation-delay: 1.2s;
+}
+
+/* Why text - only animate when in view */
+.animate-on-scroll .why-text-title {
+    animation: whyTextFadeIn 0.7s ease-out forwards;
+    animation-delay: 1.4s;
+}
+
+.animate-on-scroll .why-text-description {
+    animation: whyTextFadeIn 0.7s ease-out forwards;
+    animation-delay: 1.6s;
+}
+
+.animate-on-scroll .why-text-link {
+    animation: whyTextFadeIn 0.7s ease-out forwards;
+    animation-delay: 1.8s;
+}
+
+/* CTA section - only animate when in view */
+.animate-on-scroll .cta-title {
+    animation: ctaFadeIn 0.7s ease-out forwards;
+}
+
+.animate-on-scroll .cta-description {
+    animation: ctaFadeIn 0.7s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.animate-on-scroll .cta-form {
+    animation: ctaFadeIn 0.7s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+.animate-on-scroll .cta-shape {
+    animation: ctaTriangleFanIn 0.8s ease-out forwards;
+}
