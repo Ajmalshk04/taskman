@@ -114,19 +114,6 @@
     justify-content: flex-end;
     align-items: center;
     cursor: pointer;
-    filter: grayscale(100%);
-    opacity: 0.4;
-    transition: all 0.3s ease;
-}
-
-.logosGrid:hover .logoItem {
-    filter: grayscale(100%);
-    opacity: 0.4;
-}
-
-.logoItem:hover {
-    filter: grayscale(0%);
-    opacity: 1;
 }
 
 .logoImg {

@@ -70,12 +70,24 @@ const Hero = () => {
                                     src={logo.src} 
                                     alt={logo.alt} 
                                     className={styles.logoImg}
+                                    style={{
+                                        filter: 'grayscale(100%)',
+                                        opacity: 0.5,
+                                        transition: 'filter 0.3s ease, opacity 0.3s ease'
+                                    }}
+                                    onMouseEnter={(e) => {
+                                        e.currentTarget.style.filter = 'grayscale(0%)';
+                                        e.currentTarget.style.opacity = '1';
+                                    }}
+                                    onMouseLeave={(e) => {
+                                        e.currentTarget.style.filter = 'grayscale(100%)';
+                                        e.currentTarget.style.opacity = '0.5';
+                                    }}
                                 />
                             </div>
                         ))}
                     </div>
                 </div>
-            
                 {/* Right side - 40% */}
                 <div className={styles.rightSide}>
                     {/* Background Shapes - Static positioning */}
